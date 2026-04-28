@@ -14,21 +14,21 @@ export default function Contact() {
       label: t("phone"),
       value: site.phoneDisplay,
       href: `tel:${site.phone}`,
-      grad: "from-emerald-500 to-cyan-500",
+      grad: "from-[#1e8449] to-[#27ae60]",
     },
     {
       Icon: Mail,
       label: t("email"),
       value: site.email,
       href: `mailto:${site.email}`,
-      grad: "from-pink-500 to-rose-500",
+      grad: "from-[#27ae60] to-[#f1c40f]",
     },
     {
       Icon: MapPin,
       label: t("addressLabel"),
       value: t("address"),
       href: undefined,
-      grad: "from-amber-500 to-orange-500",
+      grad: "from-[#f1c40f] to-[#1e8449]",
     },
   ];
 

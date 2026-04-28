@@ -8,9 +8,9 @@ export default function About() {
   const t = useTranslations("about");
 
   const values = [
-    { Icon: Target, t: t("values.v1t"), d: t("values.v1d"), grad: "from-emerald-500 to-cyan-500" },
-    { Icon: Users, t: t("values.v2t"), d: t("values.v2d"), grad: "from-pink-500 to-rose-500" },
-    { Icon: LineChart, t: t("values.v3t"), d: t("values.v3d"), grad: "from-violet-500 to-indigo-500" },
+    { Icon: Target, t: t("values.v1t"), d: t("values.v1d"), grad: "from-[#1e8449] to-[#27ae60]" },
+    { Icon: Users, t: t("values.v2t"), d: t("values.v2d"), grad: "from-[#27ae60] to-[#f1c40f]" },
+    { Icon: LineChart, t: t("values.v3t"), d: t("values.v3d"), grad: "from-[#f1c40f] to-[#1e8449]" },
   ];
 
   return (
