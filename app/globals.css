@@ -136,7 +136,7 @@ body::after {
 
 @keyframes marquee {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-25%); }
 }
 [dir="rtl"] .marquee-track { animation-direction: reverse; }
 
