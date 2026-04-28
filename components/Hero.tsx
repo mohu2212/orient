@@ -14,17 +14,31 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div className="grid-bg" aria-hidden />
       <motion.div
-        className="orb"
-        style={{ width: 320, height: 320, background: "rgba(17,184,90,0.5)", top: -60, left: "8%" }}
+        className="orb hidden md:block -z-10"
+        style={{ width: 320, height: 320, background: "rgba(17,184,90,0.4)", top: -60, left: "8%" }}
         animate={{ x: [0, 30, -20, 0], y: [0, -20, 30, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden
       />
       <motion.div
-        className="orb"
-        style={{ width: 280, height: 280, background: "rgba(242,193,46,0.45)", top: 40, right: "8%" }}
+        className="orb hidden md:block -z-10"
+        style={{ width: 280, height: 280, background: "rgba(242,193,46,0.35)", top: 40, right: "8%" }}
         animate={{ x: [0, -25, 20, 0], y: [0, 25, -15, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        aria-hidden
+      />
+      <motion.div
+        className="orb md:hidden -z-10"
+        style={{ width: 180, height: 180, background: "rgba(17,184,90,0.22)", top: -40, left: "-10%" }}
+        animate={{ x: [0, 20, -10, 0], y: [0, -12, 18, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        aria-hidden
+      />
+      <motion.div
+        className="orb md:hidden -z-10"
+        style={{ width: 160, height: 160, background: "rgba(242,193,46,0.2)", top: 20, right: "-10%" }}
+        animate={{ x: [0, -16, 10, 0], y: [0, 14, -8, 0] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden
       />
 
