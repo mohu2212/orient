@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Orient — Your strategic partner in digital transformation",
+    "description": "Orient Digital Marketing & Software Solutions. Marketing, web design, e-commerce, mobile apps, and ERP/CRM systems based in Riyadh."
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start your project"
+  },
+  "hero": {
+    "tag": "Your strategic partner in digital transformation",
+    "title": "We turn your ambitions into tangible digital reality",
+    "subtitle": "End-to-end digital marketing, software, and mobile solutions tailored to grow your business with measurable results.",
+    "primary": "Start your project",
+    "secondary": "Explore our services"
+  },
+  "stats": {
+    "clients": "Happy clients",
+    "projects": "Projects delivered",
+    "years": "Years of experience"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Everything your business needs under one roof — from idea to launch.",
+    "marketing": {
+      "title": "Digital Marketing",
+      "desc": "Market analysis, audience targeting, and well-crafted seasonal campaigns.",
+      "f1": "Market analysis",
+      "f2": "Audience targeting",
+      "f3": "Seasonal campaigns"
+    },
+    "social": {
+      "title": "Social Media Management",
+      "desc": "Professional management with content design, copywriting, and community engagement.",
+      "f1": "Content design",
+      "f2": "Creative copywriting",
+      "f3": "Community engagement"
+    },
+    "web": {
+      "title": "Web Design",
+      "desc": "Fast, responsive websites with full visual identity and SEO foundations.",
+      "f1": "Responsive design",
+      "f2": "Fast performance",
+      "f3": "Full identity"
+    },
+    "ecommerce": {
+      "title": "E-Commerce",
+      "desc": "Complete store solutions on Salla, Zid, Shopify and WooCommerce.",
+      "f1": "Salla & Zid",
+      "f2": "Shopify",
+      "f3": "WooCommerce"
+    },
+    "video": {
+      "title": "Video & Motion Graphics",
+      "desc": "Promo videos, explainer animations, and social media stories that convert.",
+      "f1": "Promo videos",
+      "f2": "Motion graphics",
+      "f3": "Social stories"
+    },
+    "seo": {
+      "title": "SEO",
+      "desc": "Keyword research, technical SEO, content optimization, and link building.",
+      "f1": "Technical SEO",
+      "f2": "Content optimization",
+      "f3": "Link building"
+    },
+    "ads": {
+      "title": "Paid Advertising",
+      "desc": "Performance campaigns on Google, Meta, Snapchat, and TikTok.",
+      "f1": "Google & Meta",
+      "f2": "Snap & TikTok",
+      "f3": "Best ROI"
+    },
+    "software": {
+      "title": "Software Development",
+      "desc": "Desktop apps, ERP/CRM systems, and process automation.",
+      "f1": "Desktop apps",
+      "f2": "ERP/CRM systems",
+      "f3": "Process automation"
+    },
+    "mobile": {
+      "title": "Mobile Apps",
+      "desc": "Native and cross-platform apps with Flutter, React Native, Swift, and Kotlin.",
+      "f1": "Flutter",
+      "f2": "React Native",
+      "f3": "Swift / Kotlin"
+    }
+  },
+  "about": {
+    "title": "Why Orient?",
+    "subtitle": "We don't ship templates — we craft custom strategies for every client.",
+    "p1": "With more than ten years of experience, we've helped 500+ clients reach their digital goals with measurable, data-driven solutions.",
+    "values": {
+      "v1t": "Custom strategy",
+      "v1d": "Every plan is built around your goals and KPIs.",
+      "v2t": "Full-stack team",
+      "v2d": "Marketers, developers, and designers under one roof.",
+      "v3t": "Measurable outcomes",
+      "v3d": "We measure every step and improve continuously."
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "We're ready to answer your questions and discuss your next project.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Riyadh, Al-Rayan district, Omar bin Abdul Aziz Street",
+    "addressLabel": "Address",
+    "whatsapp": "Chat on WhatsApp",
+    "emailUs": "Email us"
+  },
+  "footer": {
+    "tagline": "Invest your time with us — your strategic partner in digital transformation.",
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  },
+  "locale": {
+    "switch": "العربية",
+    "current": "English"
+  }
+}

@@ -1,37 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orient — Invest your time with us
 
-## Getting Started
+Bilingual (Arabic / English) marketing site for **Orient Digital Marketing & Software Solutions**, built with Next.js 16, Tailwind CSS v4, and `next-intl`. Glassmorphism design using the brand's green + yellow identity.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 — root redirects to `/ar`. The English version lives at `/en`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4
+- `next-intl` for AR/EN routing with RTL/LTR direction switching
+- Framer Motion for entrance animations
+- Static export (`output: 'export'`) for GitHub Pages deployment
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/[locale]/        AR + EN routes (layout sets dir=rtl|ltr)
+components/          Header, Hero, Stats, Services, About, Contact, Footer, LocaleSwitcher
+i18n/                next-intl routing + request config
+messages/            ar.json / en.json — all copy
+lib/                 site.ts (contact info), services.ts (the 9 services)
+public/              logo.png, index.html (redirects /  → /ar/)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment (GitHub Pages)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The repo includes `.github/workflows/deploy.yml`. To enable:
 
-## Deploy on Vercel
+1. In the repo on GitHub, go to **Settings → Pages → Build and deployment** and set **Source = GitHub Actions**.
+2. Push to `main`. The workflow runs `next build` with `GITHUB_PAGES=true` (sets `basePath=/orient`) and uploads `out/` to Pages.
+3. Site will be live at `https://mohu2212.github.io/orient/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customizing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# orient
+- Brand contact (phone, email, address, WhatsApp, social URLs): [`lib/site.ts`](lib/site.ts)
+- Services list and icons: [`lib/services.ts`](lib/services.ts)
+- All visible copy: [`messages/ar.json`](messages/ar.json) and [`messages/en.json`](messages/en.json)
+- Brand colors and glass styling: [`app/globals.css`](app/globals.css) (`--primary`, `--accent`, `.glass-card`)
