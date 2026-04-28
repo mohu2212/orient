@@ -1,3 +1,6 @@
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+export const asset = (p: string) => `${basePath}${p.startsWith("/") ? p : `/${p}`}`;
+
 export const site = {
   name: "Orient",
   phone: "+966569328757",

@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: isPages ? `/${repo}` : undefined,
   assetPrefix: isPages ? `/${repo}/` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isPages ? `/${repo}` : "",
+  },
 };
 
 export default withNextIntl(nextConfig);

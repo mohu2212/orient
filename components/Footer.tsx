@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Phone, Mail, MapPin, Camera, Briefcase, Users2, AtSign } from "lucide-react";
-import { site } from "@/lib/site";
+import { site, asset } from "@/lib/site";
 
 export default function Footer() {
   const t = useTranslations();
@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="grid md:grid-cols-3 gap-10">
             <div>
               <div className="flex items-center gap-2">
-                <Image src="/logo.png" alt="Orient" width={40} height={40} className="rounded-md" />
+                <Image src={asset("/logo.png")} alt="Orient" width={40} height={40} className="rounded-md" />
                 <span className="font-bold text-lg text-[var(--primary)]">Orient</span>
               </div>
               <p className="mt-4 text-[var(--muted)] leading-relaxed">

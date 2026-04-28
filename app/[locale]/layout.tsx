@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { asset } from "@/lib/site";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -30,11 +31,11 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    icons: { icon: "/logo.png" },
+    icons: { icon: asset("/logo.png") },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      images: ["/logo.png"],
+      images: [asset("/logo.png")],
     },
   };
 }

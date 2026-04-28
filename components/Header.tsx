@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { site } from "@/lib/site";
+import { site, asset } from "@/lib/site";
 import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
       <div className="container-x mt-3">
         <div className="glass-strong rounded-full flex items-center justify-between px-4 md:px-6 h-14 md:h-16">
           <Link href={`/${locale}`} className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Orient" width={36} height={36} className="rounded-md" />
+            <Image src={asset("/logo.png")} alt="Orient" width={36} height={36} className="rounded-md" />
             <span className="font-bold text-lg text-[var(--primary)] tracking-tight">Orient</span>
           </Link>
 
