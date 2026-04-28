@@ -138,7 +138,6 @@ body::after {
   0% { transform: translateX(0); }
   100% { transform: translateX(-25%); }
 }
-[dir="rtl"] .marquee-track { animation-direction: reverse; }
 
 @keyframes spin-slow {
   to { transform: rotate(360deg); }
