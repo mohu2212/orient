@@ -59,6 +59,13 @@ export default async function LocaleLayout({
       dir={dir}
       className={`${inter.variable} ${tajawal.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme')||'dark';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <div className="bg-decor" aria-hidden />
         <NextIntlClientProvider>

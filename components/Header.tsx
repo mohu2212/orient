@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { site, asset } from "@/lib/site";
 import LocaleSwitcher from "./LocaleSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -40,7 +41,8 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
             <LocaleSwitcher />
             <a
               href={site.whatsapp}
@@ -75,7 +77,10 @@ export default function Header() {
               </a>
             ))}
             <div className="flex items-center justify-between pt-3 border-t border-[var(--border)]">
-              <LocaleSwitcher />
+              <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <LocaleSwitcher />
+              </div>
               <a
                 href={site.whatsapp}
                 target="_blank"
