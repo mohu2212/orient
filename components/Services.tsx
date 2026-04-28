@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { services } from "@/lib/services";
+import type { MouseEvent } from "react";
 
 const gradients = [
   "from-[#11b85a] to-[#1ed16b]",
@@ -16,6 +17,12 @@ const gradients = [
   "from-[#1ed16b] to-[#11b85a]",
   "from-[#f2c12e] to-[#1ed16b]",
 ];
+
+function handleMove(e: MouseEvent<HTMLElement>) {
+  const r = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+}
 
 export default function Services() {
   const t = useTranslations("services");
@@ -39,15 +46,21 @@ export default function Services() {
             return (
               <motion.article
                 key={s.id}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, rotateX: -8 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-                className="glass-card p-7"
+                transition={{ duration: 0.55, delay: (i % 3) * 0.1, ease: [0.2, 0.9, 0.2, 1] }}
+                onMouseMove={handleMove}
+                className="glass-card tilt-card relative p-7"
               >
-                <div className={`flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${gradients[i % gradients.length]} text-white shadow-lg`}>
+                <div className="tilt-glow" aria-hidden />
+                <motion.div
+                  whileHover={{ rotate: [0, -8, 8, 0], scale: 1.08 }}
+                  transition={{ duration: 0.6 }}
+                  className={`flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${gradients[i % gradients.length]} text-white shadow-lg`}
+                >
                   <Icon size={26} strokeWidth={1.8} />
-                </div>
+                </motion.div>
                 <h3 className="mt-5 text-xl font-bold">{t(`${s.id}.title`)}</h3>
                 <p className="mt-2 text-[var(--muted)] leading-relaxed">
                   {t(`${s.id}.desc`)}
