@@ -6,15 +6,15 @@ import { Check } from "lucide-react";
 import { services } from "@/lib/services";
 
 const gradients = [
-  "from-[#5dc587] to-[#27ae60]",
-  "from-[#27ae60] to-[#f7dc6f]",
-  "from-[#f7dc6f] to-[#5dc587]",
-  "from-[#5dc587] to-[#f7dc6f]",
-  "from-[#7ed3a3] to-[#27ae60]",
-  "from-[#f7dc6f] to-[#27ae60]",
-  "from-[#5dc587] to-[#27ae60]",
-  "from-[#27ae60] to-[#f7dc6f]",
-  "from-[#f7dc6f] to-[#5dc587]",
+  "from-[#11b85a] to-[#1ed16b]",
+  "from-[#11b85a] to-[#f2c12e]",
+  "from-[#f2c12e] to-[#11b85a]",
+  "from-[#1ed16b] to-[#f2c12e]",
+  "from-[#11b85a] to-[#1ed16b]",
+  "from-[#f2c12e] to-[#11b85a]",
+  "from-[#11b85a] to-[#f2c12e]",
+  "from-[#1ed16b] to-[#11b85a]",
+  "from-[#f2c12e] to-[#1ed16b]",
 ];
 
 export default function Services() {

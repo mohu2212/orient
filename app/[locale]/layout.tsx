@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Tajawal } from "next/font/google";
+import { Montserrat, Cairo } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -9,11 +9,16 @@ import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const tajawal = Tajawal({
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+const cairo = Cairo({
   subsets: ["arabic", "latin"],
-  weight: ["400", "500", "700", "800"],
-  variable: "--font-tajawal",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-cairo",
   display: "swap",
 });
 
@@ -57,7 +62,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${inter.variable} ${tajawal.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${cairo.variable} h-full antialiased`}
     >
       <head>
         <script

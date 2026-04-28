@@ -12,9 +12,19 @@
   "hero": {
     "tag": "Your strategic partner in digital transformation",
     "title": "We turn your ambitions into tangible digital reality",
-    "subtitle": "End-to-end digital marketing, software, and mobile solutions tailored to grow your business with measurable results.",
+    "subtitle": "We help brands and companies grow digitally through creative, integrated technology solutions.",
     "primary": "Start your project",
     "secondary": "Explore our services"
+  },
+  "pillars": {
+    "p1t": "Speed",
+    "p1d": "In execution",
+    "p2t": "Focus",
+    "p2d": "On results",
+    "p3t": "Integrated",
+    "p3d": "Tech solutions",
+    "p4t": "Growth",
+    "p4d": "Sustainable"
   },
   "stats": {
     "clients": "Happy clients",
