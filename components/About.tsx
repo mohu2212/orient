@@ -8,9 +8,9 @@ export default function About() {
   const t = useTranslations("about");
 
   const values = [
-    { Icon: Target, t: t("values.v1t"), d: t("values.v1d") },
-    { Icon: Users, t: t("values.v2t"), d: t("values.v2d") },
-    { Icon: LineChart, t: t("values.v3t"), d: t("values.v3d") },
+    { Icon: Target, t: t("values.v1t"), d: t("values.v1d"), grad: "from-emerald-500 to-cyan-500" },
+    { Icon: Users, t: t("values.v2t"), d: t("values.v2d"), grad: "from-pink-500 to-rose-500" },
+    { Icon: LineChart, t: t("values.v3t"), d: t("values.v3d"), grad: "from-violet-500 to-indigo-500" },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function About() {
             <div>
               <span className="eyebrow mb-4">{t("title")}</span>
               <h2 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight">
-                {t("subtitle")}
+                <span className="text-gradient">{t("subtitle")}</span>
               </h2>
               <p className="mt-5 text-[var(--muted)] leading-relaxed text-lg">
                 {t("p1")}
@@ -38,8 +38,8 @@ export default function About() {
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="glass rounded-2xl p-5 flex gap-4 items-start"
                 >
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--accent)]/15 text-[var(--accent-600)] shrink-0">
-                    <v.Icon size={22} strokeWidth={1.8} />
+                  <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${v.grad} text-white shadow-md shrink-0`}>
+                    <v.Icon size={22} strokeWidth={1.9} />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">{v.t}</h3>

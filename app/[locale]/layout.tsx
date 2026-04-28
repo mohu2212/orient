@@ -60,6 +60,7 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${tajawal.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <div className="bg-decor" aria-hidden />
         <NextIntlClientProvider>
           <Header />
           <main className="flex-1">{children}</main>

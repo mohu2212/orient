@@ -14,18 +14,21 @@ export default function Contact() {
       label: t("phone"),
       value: site.phoneDisplay,
       href: `tel:${site.phone}`,
+      grad: "from-emerald-500 to-cyan-500",
     },
     {
       Icon: Mail,
       label: t("email"),
       value: site.email,
       href: `mailto:${site.email}`,
+      grad: "from-pink-500 to-rose-500",
     },
     {
       Icon: MapPin,
       label: t("addressLabel"),
       value: t("address"),
       href: undefined,
+      grad: "from-amber-500 to-orange-500",
     },
   ];
 
@@ -35,7 +38,7 @@ export default function Contact() {
         <div className="text-center mb-12">
           <span className="eyebrow mb-4">{t("title")}</span>
           <h2 className="mt-4 text-3xl md:text-5xl font-extrabold tracking-tight">
-            {t("title")}
+            <span className="text-gradient">{t("title")}</span>
           </h2>
           <p className="mt-4 text-[var(--muted)] max-w-2xl mx-auto">
             {t("subtitle")}
@@ -58,7 +61,7 @@ export default function Contact() {
                     {...(it.href ? { href: it.href } : {})}
                     className="glass rounded-2xl p-6 h-full flex flex-col items-start gap-3 hover:border-[var(--primary)]/30 transition"
                   >
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--primary)] text-white">
+                    <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${it.grad} text-white shadow-md`}>
                       <it.Icon size={20} />
                     </div>
                     <div className="text-sm text-[var(--muted)]">{it.label}</div>

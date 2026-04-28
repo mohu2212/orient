@@ -24,7 +24,7 @@ export default function Stats() {
             transition={{ duration: 0.4, delay: i * 0.08 }}
             className="text-center md:border-x md:border-[var(--border)] md:first:border-s-0 md:last:border-e-0"
           >
-            <div className="text-4xl md:text-5xl font-extrabold bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] bg-clip-text text-transparent">
+            <div className="text-4xl md:text-5xl font-extrabold text-gradient">
               +{it.value.toLocaleString()}
             </div>
             <div className="mt-2 text-[var(--muted)] font-medium">{it.label}</div>

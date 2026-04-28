@@ -29,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-[1.15]"
         >
-          {t("title")}
+          <span className="text-gradient">{t("title")}</span>
         </motion.h1>
 
         <motion.p
