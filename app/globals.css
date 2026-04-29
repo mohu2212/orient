@@ -7,8 +7,8 @@
   --orient-gray: #2a2f36;
   --orient-light: #f5f6f8;
 
-  --background: #fafaf7;
-  --foreground: #111111;
+  --background: #f5f6f8;
+  --foreground: #0d1117;
   --surface: #ffffff;
   --primary: #11b85a;
   --primary-600: #0fa451;
@@ -18,11 +18,11 @@
   --accent-soft: #fdf2c5;
   --accent-600: #d9a91e;
   --muted: #5b6470;
-  --border: rgba(17, 17, 17, 0.08);
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-bg-strong: rgba(255, 255, 255, 0.96);
-  --glass-border: rgba(17, 17, 17, 0.06);
-  --glass-shadow: 0 4px 20px rgba(17, 17, 17, 0.06);
+  --border: rgba(13, 17, 23, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-strong: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-shadow: 0 8px 32px rgba(13, 17, 23, 0.08);
   --gradient-brand: linear-gradient(45deg, #11b85a, #f2c12e);
 }
 
@@ -97,23 +97,25 @@ body::before,
 body::after {
   content: "";
   position: fixed;
-  width: 60vw;
-  height: 60vw;
+  width: 70vw;
+  height: 70vw;
   border-radius: 50%;
-  filter: blur(180px);
-  opacity: 0.25;
+  filter: blur(160px);
+  opacity: 0.45;
   z-index: -1;
   pointer-events: none;
+  animation: float 20s ease-in-out infinite alternate;
 }
 body::before {
-  top: -20vw;
+  top: -22vw;
   inset-inline-start: -14vw;
-  background: radial-gradient(circle, rgba(17, 184, 90, 0.4), transparent 70%);
+  background: radial-gradient(circle, rgba(17, 184, 90, 0.18), transparent 70%);
 }
 body::after {
-  bottom: -24vw;
+  bottom: -26vw;
   inset-inline-end: -14vw;
-  background: radial-gradient(circle, rgba(242, 193, 46, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(242, 193, 46, 0.18), transparent 70%);
+  animation-delay: -10s;
 }
 
 @keyframes float {
@@ -271,8 +273,8 @@ html[data-theme="dark"] .orb { mix-blend-mode: plus-lighter; }
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(140deg, rgba(17, 184, 90, 0.18), rgba(0, 0, 0, 0.04) 50%, rgba(242, 193, 46, 0.18));
+  padding: 1.5px;
+  background: linear-gradient(140deg, rgba(17, 184, 90, 0.4), rgba(255, 255, 255, 0.55) 50%, rgba(242, 193, 46, 0.4));
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -281,9 +283,8 @@ html[data-theme="dark"] .orb { mix-blend-mode: plus-lighter; }
   pointer-events: none;
 }
 .glass-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(17, 184, 90, 0.12);
-  border-color: rgba(17, 184, 90, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(17, 184, 90, 0.18);
 }
 
 .section {

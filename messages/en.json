@@ -111,19 +111,6 @@
       "v3d": "We measure every step and improve continuously."
     }
   },
-  "clients": {
-    "title": "Trusted by leading brands"
-  },
-  "form": {
-    "title": "Tell us about your project",
-    "subtitle": "Fill out the form and we'll get back to you within 24 hours.",
-    "nameLabel": "Name",
-    "emailLabel": "Email",
-    "phoneLabel": "Phone",
-    "messageLabel": "Write your message here...",
-    "submit": "Send message",
-    "subjectPrefix": "Inquiry from"
-  },
   "contact": {
     "title": "Get in touch",
     "subtitle": "We're ready to answer your questions and discuss your next project.",
