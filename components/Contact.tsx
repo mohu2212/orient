@@ -4,32 +4,16 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { site } from "@/lib/site";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   const t = useTranslations("contact");
+  const tForm = useTranslations("form");
 
   const items = [
-    {
-      Icon: Phone,
-      label: t("phone"),
-      value: site.phoneDisplay,
-      href: `tel:${site.phone}`,
-      grad: "from-[#11b85a] to-[#1ed16b]",
-    },
-    {
-      Icon: Mail,
-      label: t("email"),
-      value: site.email,
-      href: `mailto:${site.email}`,
-      grad: "from-[#11b85a] to-[#f2c12e]",
-    },
-    {
-      Icon: MapPin,
-      label: t("addressLabel"),
-      value: t("address"),
-      href: undefined,
-      grad: "from-[#f2c12e] to-[#11b85a]",
-    },
+    { Icon: Phone, label: t("phone"), value: site.phoneDisplay, href: `tel:${site.phone}` },
+    { Icon: Mail, label: t("email"), value: site.email, href: `mailto:${site.email}` },
+    { Icon: MapPin, label: t("addressLabel"), value: t("address"), href: undefined },
   ];
 
   return (
@@ -38,15 +22,19 @@ export default function Contact() {
         <div className="text-center mb-12">
           <span className="eyebrow mb-4">{t("title")}</span>
           <h2 className="mt-4 text-3xl md:text-5xl font-extrabold tracking-tight">
-            <span className="text-gradient">{t("title")}</span>
+            <span className="text-gradient">{tForm("title")}</span>
           </h2>
           <p className="mt-4 text-[var(--muted)] max-w-2xl mx-auto">
-            {t("subtitle")}
+            {tForm("subtitle")}
           </p>
         </div>
 
-        <div className="glass-card rounded-3xl p-8 md:p-12">
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-5 gap-6">
+          <div className="lg:col-span-3 glass-card rounded-3xl p-7 md:p-10">
+            <ContactForm />
+          </div>
+
+          <div className="lg:col-span-2 grid gap-4 content-start">
             {items.map((it, i) => {
               const Wrapper = it.href ? "a" : "div";
               return (
@@ -59,34 +47,30 @@ export default function Contact() {
                 >
                   <Wrapper
                     {...(it.href ? { href: it.href } : {})}
-                    className="glass rounded-2xl p-6 h-full flex flex-col items-start gap-3 hover:border-[var(--primary)]/30 transition"
+                    className="glass-card rounded-2xl p-5 flex items-center gap-4 hover:border-[var(--primary)]/30 transition"
                   >
-                    <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${it.grad} text-white shadow-md`}>
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--primary-100)] text-[var(--primary-600)] shrink-0">
                       <it.Icon size={20} />
                     </div>
-                    <div className="text-sm text-[var(--muted)]">{it.label}</div>
-                    <div className="font-semibold text-[var(--foreground)] break-words" dir="ltr">
-                      {it.value}
+                    <div className="min-w-0">
+                      <div className="text-xs text-[var(--muted)] uppercase tracking-wide">{it.label}</div>
+                      <div className="font-semibold text-[var(--foreground)] break-words mt-0.5" dir="ltr">
+                        {it.value}
+                      </div>
                     </div>
                   </Wrapper>
                 </motion.div>
               );
             })}
-          </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href={site.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary shine-btn justify-center mt-2"
             >
               <MessageCircle size={18} />
               {t("whatsapp")}
-            </a>
-            <a href={`mailto:${site.email}`} className="btn-ghost">
-              <Mail size={18} />
-              {t("emailUs")}
             </a>
           </div>
         </div>
